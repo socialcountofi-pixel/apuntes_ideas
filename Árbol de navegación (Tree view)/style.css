@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #ecf0f1;
+}
+
+/* Tree View general */
+.treeview ul {
+    list-style: none;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.tree-toggle {
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 0;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.tree-toggle:hover {
+    color: #1abc9c;
+    /* Comentario tonto: "El árbol sonríe cuando pasas el mouse" 😄 */
+}
+
+.tree-children {
+    display: none; /* hijos ocultos inicialmente */
+}
+
+/* Carpeta abierta */
+.tree-folder.open > .tree-children {
+    display: block;
+}
+
+/* Flecha dinámica */
+.tree-folder > .tree-toggle::before {
+    content: "▶";
+    display: inline-block;
+    width: 20px;
+    transition: transform 0.2s;
+    margin-right: 5px;
+}
+
+.tree-folder.open > .tree-toggle::before {
+    transform: rotate(90deg);
+}
+
+/* Ítems hoja */
+.tree-file {
+    padding-left: 25px;
+}
+
+/* Colores por nivel */
+.level-1 > .tree-toggle { color: #2c3e50; }
+.level-2 > .tree-toggle { color: #16a085; }
+.level-3 > .tree-toggle { color: #2980b9; }
+
+/* Opcional: cambiar icono según tipo */
+.tree-file:before {
+    margin-right: 5px;
+}
+
+/* Animación de slide (suave) */
+.tree-children li {
+    transition: all 0.2s ease;
+}

@@ -1,0 +1,64 @@
+#cards-container {
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background: #f9f9f9;
+    transition: box-shadow 0.3s;
+    /* Comentario tonto: "Casa de estrellas futbolísticas VIP" 🌟 */
+}
+
+.card:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Contenido largo oculto por defecto */
+.full-desc {
+    display: none; /* Oculto inicialmente */
+    margin-top: 10px;
+    color: #333;
+    opacity: 0;          /* Para animación fade */
+    transition: opacity 0.3s ease-in-out;
+    /* Comentario tonto: "Shhh… contenido secreto" 🤫 */
+}
+
+/* Botón Ver más / Ver menos */
+.toggle-desc {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #2c3e50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.toggle-desc:hover {
+    background: #16a085;
+    /* Comentario tonto: "Brilla cuando pasas el mouse, como Messi en acción" ⚡ */
+}
+
+/* Icono + / - con giro y transición de color */
+.icon {
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 10px;
+    display: inline-block;
+    transition: transform 0.3s, color 0.3s;
+}
+
+/* Icono abierto: gira 180° y cambia a verde */
+.icon.open {
+    transform: rotate(180deg);
+    color: #16a085;
+}

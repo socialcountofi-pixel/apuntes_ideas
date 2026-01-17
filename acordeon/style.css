@@ -1,0 +1,178 @@
+/* =========================
+   Estilos generales del body
+   ========================= */
+body{
+    /* Color de fondo suave para no dañar la vista */
+    background: #ecf0f1;
+}
+
+/* =========================
+   Contenedor principal
+   ========================= */
+#container-main{
+    /* Centra el contenedor horizontalmente */
+    margin: 40px auto;
+
+    /* Se adapta al ancho de la pantalla */
+    width: 95%;
+
+    /* Evita que sea demasiado pequeño en móviles */
+    min-width: 320px;
+
+    /* Evita que se vea gigante en pantallas grandes */
+    max-width: 960px;
+}
+
+/* =========================
+   Título principal
+   ========================= */
+#container-main h1{
+    /* Tamaño grande para que se note quién manda */
+    font-size: 40px;
+
+    /* Sombra decorativa (un poco dramática, pero elegante) */
+    text-shadow: 4px 4px 5px #16a085;
+}
+
+/* =========================
+   Contenedor del acordeón
+   ========================= */
+.accordion-container {
+    /* Ocupa todo el ancho disponible */
+    width: 100%;
+
+    /* Separación inferior entre acordeones */
+    margin: 0 0 20px;
+
+    /* Limpia floats anteriores (por si acaso) */
+    clear: both;
+}
+
+/* =========================
+   Título del acordeón
+   ========================= */
+.accordion-titulo {
+    /* Permite posicionar el icono dentro */
+    position: relative;
+
+    /* Se comporta como bloque clickeable */
+    display: block;
+
+    /* Espaciado interno para que respire */
+    padding: 20px;
+
+    /* Tamaño de texto visible y claro */
+    font-size: 24px;
+
+    /* Peso ligero para diseño moderno */
+    font-weight: 300;
+
+    /* Color de fondo oscuro y elegante */
+    background: #2c3e50;
+
+    /* Texto blanco para contraste */
+    color: #fff;
+
+    /* Elimina subrayado si es un <a> */
+    text-decoration: none;
+}
+
+/* Estado abierto del acordeón */
+.accordion-titulo.open {
+    /* Cambia el color para indicar que está abierto */
+    background: #16a085;
+
+    /* Se mantiene el texto blanco */
+    color: #fff;
+}
+
+/* Efecto hover para indicar que es clickeable */
+.accordion-titulo:hover {
+    /* Color más llamativo al pasar el mouse */
+    background: #1abc9c;
+}
+
+/* =========================
+   Icono + (cerrado)
+   ========================= */
+.accordion-titulo span.toggle-icon:before {
+    /* Muestra el símbolo "+" cuando está cerrado */
+    content: "+";
+}
+
+/* =========================
+   Icono - (abierto)
+   ========================= */
+.accordion-titulo.open span.toggle-icon:before {
+    /* Cambia a "-" cuando el acordeón está abierto */
+    content: "-";
+}
+
+/* =========================
+   Estilos del icono
+   ========================= */
+.accordion-titulo span.toggle-icon {
+    /* Posiciona el icono dentro del título */
+    position: absolute;
+
+    /* Ubicación vertical */
+    top: 10px;
+
+    /* Ubicación horizontal */
+    right: 20px;
+
+    /* Tamaño grande para que se note */
+    font-size: 38px;
+
+    /* Que el símbolo imponga respeto */
+    font-weight: bold;
+}
+
+/* =========================
+   Contenido del acordeón
+   ========================= */
+.accordion-content {
+    /* Oculto por defecto (JS se encarga del show) */
+    display: none;
+
+    /* Espaciado interno */
+    padding: 20px;
+
+    /* Permite scroll si el contenido es largo */
+    overflow: auto;
+}
+
+/* Elimina márgenes innecesarios en párrafos */
+.accordion-content p{
+    margin: 0;
+}
+
+/* =========================
+   Imágenes dentro del contenido
+   ========================= */
+.accordion-content img {
+    /* Se comporta como bloque */
+    display: block;
+
+    /* Flota a la izquierda para diseño tipo revista */
+    float: left;
+
+    /* Espacio alrededor de la imagen */
+    margin: 0 15px 10px 0;
+
+    /* Tamaño relativo al contenedor */
+    width: 50%;
+
+    /* Mantiene proporción original */
+    height: auto;
+}
+
+/* =========================
+   Responsive (móviles)
+   ========================= */
+@media (max-width: 767px) {
+    .accordion-content {
+        /* Menos padding para pantallas pequeñas */
+        padding: 10px 0;
+    }
+}

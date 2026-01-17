@@ -1,0 +1,38 @@
+/* =========================
+   Contenedor de pestañas
+   ========================= */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   Botones de pestañas
+   ========================= */
+.tab-titulo {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #2c3e50;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+}
+
+/* =========================
+   Pestaña activa
+   ========================= */
+.tab-titulo.active {
+    background: #16a085;
+    /* Comentario tonto: "La pestaña feliz que está activa" 😄 */
+}
+
+/* =========================
+   Contenido de pestaña
+   ========================= */
+.tab-content {
+    padding: 15px;
+    border: 1px solid #ccc;
+    display: none; /* oculto por defecto */
+    /* Comentario tonto: "Aquí duerme el contenido hasta que alguien lo despierte" 💤 */
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- =========================
+         Carga del archivo CSS
+         Aquí vive toda la magia visual
+         (sin esto, el acordeón se ve triste)
+         ========================= -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- =========================
+         Carga de jQuery desde CDN
+         Importante: debe cargarse ANTES del JS
+         ========================= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+
+<body>
+
+<!-- =========================
+     Contenedor principal
+     ========================= -->
+<div id="container-main">
+
+    <!-- Título principal del acordeón -->
+    <h1>Mejores Jugadores Liga BBVA</h1>
+
+    <!-- =========================
+         Acordeón 1: Messi
+         ========================= -->
+    <div class="accordion-container">
+
+        <!-- 
+        Título clickeable del acordeón
+        Es un <a>, pero se comporta como botón
+        -->
+        <a href="#" class="accordion-titulo">
+            Messi
+            <!-- Icono + / - (lo maneja el CSS) -->
+            <span class="toggle-icon"></span>
+        </a>
+
+        <!-- Contenido oculto del acordeón -->
+        <div class="accordion-content">
+
+            <!-- Imagen del jugador -->
+            <img src="http://e0.365dm.com/15/05/660x350/champions-league-barcelona-bayern-munich-soccer-messi_3299830.jpg?20150506214236" alt="Messi"/>
+
+            <!-- Texto descriptivo -->
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <!-- Texto largo para probar scroll, paciencia y diseño -->
+            </p>
+
+        </div>  
+    </div>
+
+    <!-- =========================
+         Acordeón 2: Cristiano
+         ========================= -->
+    <div class="accordion-container">
+
+        <!-- Título clickeable -->
+        <a href="#" class="accordion-titulo">
+            Cristiano
+            <!-- El mismo icono reutilizado (no reinventamos la rueda) -->
+            <span class="toggle-icon"></span>
+        </a>
+
+        <!-- Contenido oculto -->
+        <div class="accordion-content">
+
+            <!-- Imagen del jugador -->
+            <img src="http://www.abc.es/Media/201301/10/cristiano-ronaldo--644x362.jpg" alt="Cristiano Ronaldo"/>
+
+            <!-- Texto descriptivo -->
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <!-- Mucho texto porque el acordeón necesita sentirse útil -->
+            </p>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- =========================
+     Aquí iría tu JS del acordeón
+     (después de jQuery, siempre)
+     ========================= -->
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+/* Wrapper general */
+.wrapper {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+/* Sidebar */
+#sidebar {
+    width: 250px; /* ancho completo */
+    background: #2c3e50;
+    color: #fff;
+    position: fixed; /* Flota sobre contenido */
+    height: 100%;
+    transition: transform 0.3s ease; /* animación deslizante */
+    z-index: 2;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    /* Comentario tonto: "Casa de secretos del dashboard" 🤫 */
+}
+
+/* Colapsado: se mueve hacia la izquierda dejando solo iconos visibles */
+#sidebar.collapsed {
+    transform: translateX(-190px); /* solo iconos visibles */
+}
+
+/* Sidebar abierto */
+#sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar-header {
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    background: #1abc9c;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    padding: 15px 20px;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.sidebar-menu li:hover {
+    background: #16a085;
+    /* Comentario tonto: "El menú feliz cuando pasas el mouse" 😄 */
+}
+
+/* Icono y texto del menú */
+.menu-icon {
+    width: 30px;
+    text-align: center;
+}
+
+.menu-text {
+    margin-left: 10px;
+}
+
+/* Tooltip cuando está colapsado */
+#sidebar.collapsed .menu-text {
+    display: none; /* texto oculto */
+}
+
+#sidebar.collapsed .sidebar-menu li:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 60px;
+    background: #1abc9c;
+    padding: 5px 10px;
+    border-radius: 3px;
+    white-space: nowrap;
+    z-index: 10;
+    color: #fff;
+    font-size: 14px;
+    /* Comentario tonto: "Tooltip mágico aparece al pasar el mouse" ✨ */
+}
+
+/* Contenido principal */
+#main-content {
+    flex: 1;
+    padding: 20px;
+    transition: margin-left 0.3s;
+    margin-left: 250px;
+}
+
+#sidebar.collapsed ~ #main-content {
+    margin-left: 60px;
+}
+
+#toggle-sidebar {
+    font-size: 24px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    /* Comentario tonto: "Botón mágico que abre y cierra el misterio del sidebar" 🕵️ */
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Árbol de Navegación Ultra Visual</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="treeview">
+
+    <ul class="tree-root">
+        <li class="tree-folder level-1">
+            <span class="tree-toggle">📁 Proyectos</span>
+            <ul class="tree-children">
+                <li class="tree-folder level-2">
+                    <span class="tree-toggle">📁 Proyecto 1</span>
+                    <ul class="tree-children">
+                        <li class="tree-file">📄 Documento A</li>
+                        <li class="tree-file">📄 Documento B</li>
+                    </ul>
+                </li>
+                <li class="tree-folder level-2">
+                    <span class="tree-toggle">📁 Proyecto 2</span>
+                    <ul class="tree-children">
+                        <li class="tree-file">📄 Documento X</li>
+                        <li class="tree-file">📄 Documento Y</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li class="tree-folder level-1">
+            <span class="tree-toggle">📁 Documentos</span>
+            <ul class="tree-children">
+                <li class="tree-file">📄 Documento 1</li>
+                <li class="tree-file">📄 Documento 2</li>
+            </ul>
+        </li>
+
+        <li class="tree-folder level-1">
+            <span class="tree-toggle">📁 Imágenes</span>
+            <ul class="tree-children">
+                <li class="tree-file">🖼️ Imagen 1</li>
+                <li class="tree-file">🖼️ Imagen 2</li>
+            </ul>
+        </li>
+    </ul>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

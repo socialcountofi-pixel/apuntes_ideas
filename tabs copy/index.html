@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabs Acordeón Mega Interactivo</title>
+
+    <!-- =========================
+         CSS externo
+         style.css contiene todo el diseño y estilos animados
+         Comentario tonto: "Sin esto las pestañas se ven como fantasmas aburridos" 👻
+         ========================= -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- =========================
+         jQuery CDN
+         Comentario tonto: "El héroe que hace que las pestañas bailen" 💃
+         ========================= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div id="tabs-container">
+
+    <!-- =========================
+         Pestañas con icono + / -
+         ========================= -->
+    <div class="tabs">
+        <button class="tab-titulo active" data-tab="tab1">
+            Messi <span class="toggle-icon">-</span>
+        </button>
+        <button class="tab-titulo" data-tab="tab2">
+            Cristiano <span class="toggle-icon">+</span>
+        </button>
+        <button class="tab-titulo" data-tab="tab3">
+            Neymar <span class="toggle-icon">+</span>
+        </button>
+    </div>
+
+    <!-- =========================
+         Contenido de las pestañas
+         ========================= -->
+    <div class="tab-content" id="tab1">
+        <p>Contenido de Messi...</p>
+    </div>
+
+    <div class="tab-content" id="tab2">
+        <p>Contenido de Cristiano...</p>
+    </div>
+
+    <div class="tab-content" id="tab3">
+        <p>Contenido de Neymar...</p>
+    </div>
+
+</div>
+
+<!-- =========================
+     JS externo
+     script.js contiene la lógica animada de acordeón con iconos
+     Comentario tonto: "Aquí vive la varita mágica + / -" ✨
+     ========================= -->
+<script src="script.js"></script>
+
+</body>
+</html>
